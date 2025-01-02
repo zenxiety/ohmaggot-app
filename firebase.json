@@ -1,0 +1,22 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "maggood-d45fb",
+          "appId": "1:656713660724:android:6719565509fcdfce9f4d61",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "maggood-d45fb",
+          "configurations": {
+            "android": "1:656713660724:android:6719565509fcdfce9f4d61",
+            "ios": "1:656713660724:ios:d58fc4d3fbb81d2b9f4d61"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "656713660724",
+    "project_id": "maggood-d45fb",
+    "storage_bucket": "maggood-d45fb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:656713660724:android:6719565509fcdfce9f4d61",
+        "android_client_info": {
+          "package_name": "com.example.maggood"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRftCBOuVsiKt_pSBBo38O6VU8mRvX1Sw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:656713660724:android:e6de25bdf3244c069f4d61",
+        "android_client_info": {
+          "package_name": "com.maggood.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRftCBOuVsiKt_pSBBo38O6VU8mRvX1Sw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
