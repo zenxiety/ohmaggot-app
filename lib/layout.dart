@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:maggood/viewmodels/providers/layout_provider.dart';
-import 'package:maggood/views/screens/artikel_screen.dart';
+import 'package:maggood/views/screens/booklet_screen.dart';
 import 'package:maggood/views/screens/dashboard_screen.dart';
-import 'package:maggood/views/screens/jadwal_screen.dart';
+import 'package:maggood/views/screens/statistik_screen.dart';
 import 'package:provider/provider.dart';
 
 class Layout extends StatelessWidget {
@@ -11,9 +11,9 @@ class Layout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const pages = [
-      JadwalScreen(),
+      StatistikScreen(),
       DashboardScreen(),
-      ArtikelScreen(),
+      BookletScreen(),
     ];
 
     return Consumer<LayoutProvider>(builder: (context, state, _) {
@@ -28,9 +28,9 @@ class Layout extends StatelessWidget {
           },
           items: const [
             BottomNavigationBarItem(
-              label: "Jadwal",
+              label: "Statistik",
               icon: Icon(
-                Icons.calendar_month,
+                Icons.auto_graph,
               ),
             ),
             BottomNavigationBarItem(
@@ -40,7 +40,7 @@ class Layout extends StatelessWidget {
               ),
             ),
             BottomNavigationBarItem(
-              label: "Artikel",
+              label: "Buku Panduan",
               icon: Icon(
                 Icons.menu_book_rounded,
               ),
