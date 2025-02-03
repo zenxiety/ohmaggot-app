@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:maggood/viewmodels/providers/layout_provider.dart';
 import 'package:maggood/views/screens/booklet_screen.dart';
 import 'package:maggood/views/screens/dashboard_screen.dart';
-import 'package:maggood/views/screens/statistik_screen.dart';
+import 'package:maggood/views/screens/statistics_screen.dart';
 import 'package:provider/provider.dart';
 
 class Layout extends StatelessWidget {

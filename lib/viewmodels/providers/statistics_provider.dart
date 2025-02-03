@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:maggood/models/dashboard_model.dart';
+import 'package:maggood/models/statistics_model.dart';
 import 'package:maggood/utils/appstate.dart';
 import 'package:maggood/viewmodels/services/services.dart';
 
-class DashboardProvider with ChangeNotifier {
-  DashboardModel? dashboardModel;
+class StatisticsProvider with ChangeNotifier {
+  StatisticsModel? statisticsModel;
   late final DateTime dateTime;
 
   AppState appState = AppState.initial;
 
-  DashboardProvider() {
-    listenDashboardData();
+  StatisticsProvider() {
+    listenStatistikData();
     dateTime = DateTime.now();
   }
 
-  void listenDashboardData() {
+  void listenStatistikData() {
     appState = AppState.loading;
     notifyListeners();
 
     try {
-      Services.getDashboardData().listen((data) {
-        dashboardModel = data;
+      Services.getStatisticsData().listen((data) {
+        statisticsModel = data;
         appState = AppState.success;
         notifyListeners();
       });

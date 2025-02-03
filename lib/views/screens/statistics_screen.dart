@@ -1,7 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:maggood/utils/appcolor.dart';
-import 'package:maggood/viewmodels/providers/statistik_provider.dart';
+import 'package:maggood/viewmodels/providers/statistics_provider.dart';
 import 'package:provider/provider.dart';
 
 class StatistikScreen extends StatelessWidget {
@@ -80,7 +80,7 @@ class StatistikScreen extends StatelessWidget {
                           SizedBox(
                             width: 360,
                             height: 360,
-                            child: Consumer<StatistikProvider>(
+                            child: Consumer<StatisticsProvider>(
                                 builder: (context, state, _) {
                               return LineChart(
                                 LineChartData(
@@ -96,11 +96,16 @@ class StatistikScreen extends StatelessWidget {
                                     LineChartBarData(
                                       color: mainGreen,
                                       spots: [
-                                        for (var i = 0; i < 4; i++)
+                                        for (var i = 1; i <= 20; i++)
                                           FlSpot(
                                               i.toDouble(),
-                                              state.historyStatsModel
-                                                      ?.temperature[i] ??
+                                              state
+                                                      .statisticsModel
+                                                      ?.sensor1[i
+                                                          .toString()
+                                                          .padLeft(2, '0')]
+                                                      ?.temperature
+                                                      .toDouble() ??
                                                   0),
                                       ],
                                     ),
@@ -148,7 +153,7 @@ class StatistikScreen extends StatelessWidget {
                           SizedBox(
                             width: 360,
                             height: 360,
-                            child: Consumer<StatistikProvider>(
+                            child: Consumer<StatisticsProvider>(
                                 builder: (context, state, _) {
                               return LineChart(
                                 LineChartData(
@@ -164,11 +169,16 @@ class StatistikScreen extends StatelessWidget {
                                     LineChartBarData(
                                       color: mainGreen,
                                       spots: [
-                                        for (var i = 0; i < 4; i++)
+                                        for (var i = 1; i <= 20; i++)
                                           FlSpot(
                                               i.toDouble(),
-                                              state.historyStatsModel
-                                                      ?.humidity[i] ??
+                                              state
+                                                      .statisticsModel
+                                                      ?.sensor1[i
+                                                          .toString()
+                                                          .padLeft(2, '0')]
+                                                      ?.humidity
+                                                      .toDouble() ??
                                                   0),
                                       ],
                                     ),
@@ -216,7 +226,7 @@ class StatistikScreen extends StatelessWidget {
                           SizedBox(
                             width: 360,
                             height: 360,
-                            child: Consumer<StatistikProvider>(
+                            child: Consumer<StatisticsProvider>(
                                 builder: (context, state, _) {
                               return LineChart(
                                 LineChartData(
@@ -232,11 +242,16 @@ class StatistikScreen extends StatelessWidget {
                                     LineChartBarData(
                                       color: mainGreen,
                                       spots: [
-                                        for (var i = 0; i < 4; i++)
+                                        for (var i = 1; i <= 20; i++)
                                           FlSpot(
                                               i.toDouble(),
-                                              state.historyStatsModel
-                                                      ?.soil[i] ??
+                                              state
+                                                      .statisticsModel
+                                                      ?.sensor1[i
+                                                          .toString()
+                                                          .padLeft(2, '0')]
+                                                      ?.soil
+                                                      .toDouble() ??
                                                   0),
                                       ],
                                     ),
