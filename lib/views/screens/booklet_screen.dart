@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:maggood/utils/appcolor.dart';
+import 'package:maggood/utils/appwidgets.dart';
 import 'package:maggood/viewmodels/providers/booklet_provider.dart';
 import 'package:pdfx/pdfx.dart';
 import 'package:provider/provider.dart';
@@ -51,13 +52,7 @@ class BookletScreen extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             color: mainWhite,
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Color.fromRGBO(0, 0, 0, .25),
-                                blurRadius: 12,
-                                offset: Offset(0, 4),
-                              ),
-                            ],
+                            boxShadow: [cardShadow()],
                           ),
                           child: SizedBox(
                             width: MediaQuery.of(context).size.width,

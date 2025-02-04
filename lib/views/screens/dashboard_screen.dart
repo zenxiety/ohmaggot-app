@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:maggood/utils/appcolor.dart';
+import 'package:maggood/utils/appwidgets.dart';
 import 'package:maggood/viewmodels/providers/dashboard_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -110,13 +111,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       decoration: BoxDecoration(
         color: mainWhite,
         borderRadius: BorderRadius.circular(20),
-        boxShadow: const [
-          BoxShadow(
-            color: Color.fromRGBO(0, 0, 0, .25),
-            blurRadius: 12,
-            offset: Offset(0, 4),
-          ),
-        ],
+        boxShadow: [cardShadow()],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
